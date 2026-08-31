@@ -2,6 +2,7 @@ import Img from "../../ui/Img"
 import Anchor from "../../ui/Anchor"
 import Logo from '../../assets/img/logo.png'
 import menuData from "../../dummy/menuData"
+import Pbtn from "../../ui/Pbtn"
 
 const Nav = function () {
     
@@ -28,7 +29,7 @@ const Nav = function () {
                         <Anchor href="#" className="text-blue-500 text-[12px] font-bold no-underline lowercase" content="need help ?"></Anchor>
                         <Anchor href="#" className="text-blue-500 font-bold no-underline lowercase" content="+1 5000 6000"></Anchor>
                     </div>
-                      
+                    <Pbtn className="bg-[#4881fb6e] hover:bg-[#4881fb] hover:text-white" text="book service now"></Pbtn>
                 </div>
             </div>
         </nav>
