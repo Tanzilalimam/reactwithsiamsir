@@ -18,7 +18,7 @@ const Nav = function () {
                             {
                             menuData.map((item, index) => (
                             <li key={index} className="list-none">
-                                <Anchor href={item.href} className="text-red-500 hover:text-blue-500 font-semibold no-underline uppercase transition-all ease-linear duration-300" content={item.label}>
+                                <Anchor href={item.href} className="text-black1 hover:text-blue-500 font-semibold no-underline capitalize" content={item.label}>
                                 </Anchor>
                             </li>
                         ))

@@ -9,3 +9,7 @@
   margin: 0 auto;
   max-width: 1280px;
 }
+@theme{
+  --color-black1: #161c2d;
+  --font-opsan: 'Open Sans';
+}
