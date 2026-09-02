@@ -2,8 +2,8 @@ import Img from "../../ui/Img"
 import Para from "../../ui/para"
 import Anchor from "../../ui/Anchor";
 import Icons from "../../dummy/icons";
-import menuData from "../../dummy/menuData";
 import Logo2 from '../../assets/img/logo2.png'
+import footerData from "../../dummy/footer/footerData1";
 
 const Footer = function () {
 
@@ -21,42 +21,62 @@ const Footer = function () {
                         we’ve perfected our cleaning methods to ensure
                         every job is done right.'></Para>
                         <div className="flex gap-10">
-                        {
-                            // icons.map(function(item, index){
-                            //     return(
-                            //     <Anchor key={index} className="text-white/75 text-2xl hover:text-white cursor-pointer" content={item.icon}>
-                            //     </Anchor>
-                            //     )
-                            // })
-                            Icons.map((item, index)=>(
-                                <Anchor key={index} className="text-white/75 text-2xl hover:text-cyan-400 cursor-pointer" content={item.icon}>
-                                </Anchor>
-                            ))
-                        }
+                            {
+                                // icons.map(function(item, index){
+                                //     return(
+                                //     <Anchor key={index} className="text-white/75 text-2xl hover:text-white cursor-pointer" content={item.icon}>
+                                //     </Anchor>
+                                //     )
+                                // })
+                                Icons.social.map(function(item, index){
+                                    let Icn = item.icon;
+                                    return(
+
+                                        <Anchor key={index} className="text-white/75 text-2xl hover:text-cyan-400 cursor-pointer" content={<Icn />}>
+                                    </Anchor>
+                                    )
+                                })
+                            }
                         </div>
                     </div>
                     <ul className="flex flex-col items-start gap-2">
                         <h4 className="text-white text-[20px] font-bold capitalize">company</h4>
                         {
-                            menuData.map((item, index)=>(
+                            footerData.footerMenu.map((item, index) => (
                                 <li key={index} className="list-none">
-                                <Anchor href={item.href} className="text-white/75 hover:text-blue-500 font-semibold no-underline capitalize" content={item.label}>
-                                </Anchor>
-                            </li>
+                                    <Anchor href={item.href} className="text-white/75 hover:text-blue-500 font-semibold no-underline capitalize" content={item.label}>
+                                    </Anchor>
+                                </li>
                             ))
                         }
                     </ul>
                     <ul className="flex flex-col items-start gap-2">
                         <h4 className="text-white text-[20px] font-bold capitalize">our services</h4>
                         {
-                            menuData.map((item, index)=>(
+                            footerData.footerService.map((item, index) => (
                                 <li key={index} className="list-none">
-                                <Anchor href={item.href} className="text-white/75 hover:text-blue-500 font-semibold no-underline capitalize" content={item.label}>
-                                </Anchor>
-                            </li>
+                                    <Anchor href={item.href} className="text-white/75 hover:text-blue-500 font-semibold no-underline capitalize" content={item.label}>
+                                    </Anchor>
+                                </li>
                             ))
                         }
                     </ul>
+                    <div className="flex flex-col gap-5">
+                        <div className="flex items-center gap-2.5">
+                        {
+                            footerData.footerContact.map(function(item, index){
+                                let Cont = item.icon;
+                                return(
+                                    <>
+<Anchor key={index} className="text-white/75 hover:text-white" content={<Cont className="text-white block"/>}></Anchor>
+<h4><label /></h4>
+                                    </>
+                                ) 
+                            })
+                        }
+                        
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
