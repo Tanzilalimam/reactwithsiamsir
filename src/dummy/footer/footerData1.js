@@ -74,17 +74,20 @@ footerContact: [
     {
         id: 0,
         icon: CiClock2,
-        label: 'we are open'
+        label: 'we are open',
+        desc: 'Monday - Saturday 08.00 - 18.00'
     },
     {
         id: 1,
         icon: CiLocationOn,
-        label: 'office location'
+        label: 'office location',
+        desc: '100 S Main St, New York, NY'
     },
     {
         id: 2,
         icon: FaEnvelope,
-        label: 'send a message'
+        label: 'send a message',
+        desc: 'contact@uclean.com'
     },
 ]
 

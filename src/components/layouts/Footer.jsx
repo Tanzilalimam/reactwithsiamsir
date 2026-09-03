@@ -61,21 +61,21 @@ const Footer = function () {
                             ))
                         }
                     </ul>
-                    <div className="flex flex-col gap-5">
-                        <div className="flex items-center gap-2.5">
-                        {
-                            footerData.footerContact.map(function(item, index){
-                                let Cont = item.icon;
-                                return(
-                                    <>
-<Anchor key={index} className="text-white/75 hover:text-white" content={<Cont className="text-white block"/>}></Anchor>
-<h4><label /></h4>
-                                    </>
-                                ) 
-                            })
-                        }
-                        
-                        </div>
+                    <div className="flex flex-col items-start gap-2.5">
+                    {
+                    footerData.footerContact.map(function(item, index){
+                    let Cont = item.icon;
+                    return(
+                    <div key={index} className=" flex flex-col items-start gap-2">
+                    <div className="flex items-center gap-2.5">
+                    <Cont className="text-[#fee74a] text-[16px]"/>
+                    <h4 className="text-white text-[16px] font-bold capitalize">{item.label}</h4>
+                    </div>
+                    <Para className='text-white/75' text={item.desc}></Para>
+                    </div>
+                    ) 
+                    })
+                    }
                     </div>
                 </div>
             </div>
