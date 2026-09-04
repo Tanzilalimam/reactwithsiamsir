@@ -1,24 +1,25 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider} from 'react-router-dom'
 import HomeIndex from "./pages/home/HIndex"
 import AboutIndex from "./pages/about/AbtIndex"
 import ServiceIndex from "./pages/services/SrvcIndex"
 import RootLayout from './components/layouts/RootLayout'
 
+const routes = createRoutesFromElements(
+  <>
+  <Route element= {<RootLayout />}>
+    <Route path="/" element={<HomeIndex />}></Route>
+    <Route path="/about" element={<AboutIndex />}></Route>
+    <Route path="/service" element={<ServiceIndex />}></Route>
+  </Route>
+  </>
+);
+
+const router = createBrowserRouter(routes);
+
 function App() {
 
   return (
-    // <>
-    //   <HomeIndex></HomeIndex>
-    //   <AboutIndex></AboutIndex>
-    //   <ServiceIndex></ServiceIndex>
-    // </>
-     <BrowserRouter>
-      <Routes element= {<RootLayout/>}>
-        <Route path="/" element= {<HomeIndex />}></Route>
-        <Route path="/about" element= {<AboutIndex />}></Route>
-        <Route path="/service" element= {<ServiceIndex />}></Route>
-      </Routes>
-   </BrowserRouter>
+     <RouterProvider router={router} />
   )
 }
 

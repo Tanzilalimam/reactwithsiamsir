@@ -2,7 +2,7 @@ const menuData = [
         {
             id: 0,
             label: "home",
-            href: "/home"
+            href: "/"
         },
         {
             id: 1,
