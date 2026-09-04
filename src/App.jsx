@@ -4,22 +4,32 @@ import AboutIndex from "./pages/about/AbtIndex"
 import ServiceIndex from "./pages/services/SrvcIndex"
 import RootLayout from './components/layouts/RootLayout'
 
-const routes = createRoutesFromElements(
-  <>
-  <Route element= {<RootLayout />}>
-    <Route path="/" element={<HomeIndex />}></Route>
-    <Route path="/about" element={<AboutIndex />}></Route>
-    <Route path="/service" element={<ServiceIndex />}></Route>
-  </Route>
-  </>
-);
+// const routes = createRoutesFromElements(
+//   <>
+//   <Route element= {<RootLayout />}>
+//     <Route path="/" element={<HomeIndex />}></Route>
+//     <Route path="/about" element={<AboutIndex />}></Route>
+//     <Route path="/service" element={<ServiceIndex />}></Route>
+//   </Route>
+//   </>
+// );
 
-const router = createBrowserRouter(routes);
+const routerValue = createBrowserRouter(
+    createRoutesFromElements(
+    <>
+    <Route element= {<RootLayout />}>
+      <Route path="/" element={<HomeIndex />}></Route>
+      <Route path="/about" element={<AboutIndex />}></Route>
+      <Route path="/service" element={<ServiceIndex />}></Route>
+    </Route>
+    </>
+  )
+)
 
 function App() {
 
   return (
-     <RouterProvider router={router} />
+     <RouterProvider router={routerValue} />
   )
 }
 

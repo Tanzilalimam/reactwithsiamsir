@@ -3,6 +3,7 @@ import Anchor from "../../ui/Anchor"
 import Logo from '../../assets/img/logo.png'
 import menuData from "../../dummy/menuData"
 import Pbtn from "../../ui/Pbtn"
+import { NavLink } from "react-router-dom"
 
 const Nav = function () {
     
@@ -17,9 +18,10 @@ const Nav = function () {
                         <ul className="flex gap-6.5">
                             {
                             menuData.map((item, index) => (
-                            <li key={index} className="list-none">
-                                <Anchor href={item.href} className="text-black1 hover:text-blue-500 font-semibold no-underline capitalize" content={item.label}>
-                                </Anchor>
+                                <li key={index} className="list-none">
+                                <NavLink to={item.href} className="text-black1 hover:text-blue-500 font-semibold no-underline capitalize">
+                                    {item.label}
+                                </NavLink>
                             </li>
                         ))
                       }
