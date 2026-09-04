@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import HomeIndex from "./pages/home/HIndex"
 import AboutIndex from "./pages/about/AbtIndex"
 import ServiceIndex from "./pages/services/SrvcIndex"
+import RootLayout from './components/layouts/RootLayout'
 
 function App() {
 
@@ -12,7 +13,7 @@ function App() {
     //   <ServiceIndex></ServiceIndex>
     // </>
      <BrowserRouter>
-      <Routes>
+      <Routes element= {<RootLayout/>}>
         <Route path="/" element= {<HomeIndex />}></Route>
         <Route path="/about" element= {<AboutIndex />}></Route>
         <Route path="/service" element= {<ServiceIndex />}></Route>
