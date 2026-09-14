@@ -11,8 +11,8 @@ const menuData = [
         },
         {
             id: 2,
-            label: "how it works",
-            href: "/howitwork"
+            label: "products",
+            href: "/products"
         },
         {
             id: 3,
@@ -26,8 +26,8 @@ const menuData = [
         },
         {
             id: 5,
-            label: "blogs",
-            href: "/blog"
+            label: "recipes",
+            href: "/recipes"
         },
         {
             id: 6,
