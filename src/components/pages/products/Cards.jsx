@@ -1,9 +1,8 @@
 import axios from 'axios'
+import { useEffect, useState } from 'react'
 import Img from '../../../ui/Img'
 import Para from '../../../ui/para'
 import Pbtn from '../../../ui/Pbtn'
-import Beef from '../../../assets/img/beeffilet.webp'
-import { useEffect, useState } from 'react'
 
 const Cards = function(){
 let [data, setData] = useState([]);
