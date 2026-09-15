@@ -4,6 +4,7 @@ import AboutIndex from "./pages/about/AbtIndex"
 import ServiceIndex from "./pages/services/SrvcIndex"
 import ProductsIndex from './pages/ProductsIndex'
 import RecipeIndex from './pages/RecipeIndex'
+import StaffIndex from './pages/StaffIndex'
 import RootLayout from './components/layouts/RootLayout'
 import ErrorPage from './components/common/Error'
 import DashboardIndex from './pages/dashboard/DashboardIndex'
@@ -34,6 +35,7 @@ const routerValue = createBrowserRouter(
       <Route path='/service' element={<ServiceIndex/>}></Route>
       <Route path='/products' element={<ProductsIndex/>}></Route>
       <Route path='/recipes' element={<RecipeIndex/>}></Route>
+      <Route path='/contact' element={<StaffIndex/>}></Route>
     </Route>
     <Route element={<DashRootLayouts/>}>
       <Route path='/dashboard' element={<DashboardIndex/>}></Route>
