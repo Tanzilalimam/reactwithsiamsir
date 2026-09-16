@@ -23,7 +23,7 @@ useEffect(function(){
                 {
                     data.map(function(recipe){
                         return(
-                    <div key={recipe.id} className="w-[25%] h-150 overflow-y-auto scrollbar-none flex flex-col items-start gap-3 border-2 border-black rounded-t-xl">
+                    <div key={recipe.id} className="w-[30%] h-150 overflow-y-auto scrollbar-none flex flex-col items-start gap-3 border-2 border-black rounded-t-xl">
                     <Img src={recipe.image} alt='no pic' className='w-ful object-cover rounded-t-xl'></Img>
                     <div className="px-6 flex flex-col items-start gap-3">
                         <h4 className='text-xl font-semibold capitalize'>{recipe.name}</h4>

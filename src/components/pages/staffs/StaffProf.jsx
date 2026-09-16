@@ -6,7 +6,7 @@ import Pbtn from "../../../ui/Pbtn"
 import Beef from '../../../assets/img/beeffilet.webp'
 
 const StaffProfile = function(){
-let [data, setData] = useState([]);
+let [data, setData] = useState();
 useEffect(function(){
     async function viewData(){
         let profileApi = await axios.get('https://dummyjson.com/users') ;

@@ -24,7 +24,7 @@ useEffect(function(){
                     data.map(function(item){
                         return item.products.map(function(product){
                             return(
-                        <div key={product.id} className="w-[25%] flex flex-col items-start gap-3 border-2 border-black rounded-t-xl">
+                        <div key={product.id} className="w-[30%] flex flex-col items-start gap-3 border-2 border-black rounded-t-xl">
                         <Img src={product.thumbnail} alt='no pic' className='w-full object-cover rounded-t-xl'></Img>
                         <div className="px-6 flex flex-col items-start gap-3">
                         <h4 className='text-xl font-semibold capitalize'>{product.title}</h4>
