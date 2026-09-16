@@ -9,9 +9,10 @@ const StaffProfile = function(){
 let [data, setData] = useState();
 useEffect(function(){
     async function viewData(){
-        let profileApi = await axios.get('https://dummyjson.com/users') ;
+        let profileApi = await axios.get(`${import.meta.env.VITE_profileApi}/users`);
         setData(profileApi.data.users);
         console.log(profileApi.data.users);
+        console.log(import.meta.env.VITE_name);
     }
     viewData();
 }, []);
@@ -21,7 +22,7 @@ useEffect(function(){
             <div className="container">
                 <div className="flex flex-wrap justify-start items-start gap-10">
                 {
-                    data.map(function(item){
+                    data?.map(function(item){
                     return(
                     <div key={item.id} className="w-[30%] flex flex-col items-start gap-3 border-2 border-amber-700 rounded-t-xl">
                         <Img src={item.image} alt='no pic' className='w-full object-cover rounded-t-xl'></Img>
