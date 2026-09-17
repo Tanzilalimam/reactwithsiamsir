@@ -19,7 +19,7 @@ const Nav = function () {
                             {
                             menuData.map((item, index) => (
                                 <li key={index} className="list-none">
-                                <NavLink to={item.href} className="text-black1 hover:text-blue-500 font-semibold no-underline capitalize">
+                                <NavLink to={item.href} className="text-black1 hover:text-blue-500 font-semibold no-underline capitalize trans">
                                     {item.label}
                                 </NavLink>
                             </li>
@@ -31,7 +31,7 @@ const Nav = function () {
                         <Anchor href="#" className="text-blue-500 text-[12px] font-bold no-underline lowercase" content="need help ?"></Anchor>
                         <Anchor href="#" className="text-blue-500 font-bold no-underline lowercase" content="+1 5000 6000"></Anchor>
                     </div>
-                    <Pbtn className="bg-[#4881fb6e] hover:bg-[#4881fb] hover:text-white" text="book service now"></Pbtn>
+                    <Pbtn className="bg-[#4881fb6e] hover:bg-blue1 hover:text-white" text="book service now"></Pbtn>
                     <NavLink to='/dashboard' className="bg-[#4881fb6e] hover:bg-[#4881fb] hover:text-white py-2 px-6.5 rounded-4xl text-[15px] font-semibold leading-7.25 capitalize cursor-pointer transition-all ease-linear duration-300">dashboard</NavLink>
                 </div>
             </div>

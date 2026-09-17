@@ -10,7 +10,7 @@ let [data, setData] = useState([]);
 
 useEffect(function(){
     async function viewData(){
-        let recipeApi = await axios.get('https://dummyjson.com/recipes');
+        let recipeApi = await axios.get(`${import.meta.env.VITE_recipeApi}/recipes`);
         setData(recipeApi.data.recipes);
         console.log(recipeApi.data.recipes);
     }

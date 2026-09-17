@@ -9,7 +9,7 @@ let [data, setData] = useState([]);
 
 useEffect(function(){
     async function viewData(){
-    let productApi = await axios.get('https://dummyjson.com/carts');
+    let productApi = await axios.get(`${import.meta.env.VITE_productApi}/carts`);
     setData(productApi.data.carts);
     console.log(productApi.data.carts);
     }
